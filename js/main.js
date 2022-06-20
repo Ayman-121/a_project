@@ -91,6 +91,29 @@ dateDiv.innerHTML = date.getFullYear();
 //
 //
 //
+let aloneImg = document.querySelector("#aloneImg");
+
+aloneImg.onclick = function () {
+  // Create The Overlay
+  let overlay = document.createElement("div");
+  overlay.classList.add("my-overlay");
+  document.body.appendChild(overlay);
+
+  // Create The Elemnt and Put The Text
+  let theImg = document.createElement("img");
+  theImg.classList.add("overlay-text","popup-img");
+  theImg.src = aloneImg.src;
+  overlay.appendChild(theImg);
+
+  // Create Exit button
+  let exitButton = document.createElement("div");
+  exitButton.classList.add("overlay-exit");
+  exitButton.innerHTML = "X";
+  exitButton.onclick = function () {
+    overlay.remove();
+  };
+  overlay.appendChild(exitButton);
+};
 //
 //
 //

@@ -679,4 +679,70 @@ html {
   left: -16px;
   background-color: white;
 }
+.kkis-school .activity {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+}
+.kkis-school .activity .activity-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 110%;
+  margin-bottom: 50px;
+}
+.kkis-school .activity .activity-header .subtitle {
+  font-size: 24px;
+}
+.kkis-school .activity img.activity-name {
+  max-width: 100px;
+  border-radius: 20px;
+}
+.kkis-school .activity img.activity {
+  max-width: 280px;
+  border: 6px solid #2a2a2a;
+  border-radius: 10px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+img.the-logo {
+  max-width: 250px;
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  z-index: 4444;
+}
+
+.popup-img {
+  padding: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .popup-img {
+    max-width: 80% !important;
+  }
+}
+@media (max-width: 590) {
+  .activity img.activity {
+    max-width: 200px !important;
+  }
+  .activity .activity-header {
+    display: -ms-grid !important;
+    display: grid !important;
+  }
+  .activity .activity-header img {
+    display: block !important;
+  }
+}
 /*# sourceMappingURL=main.css.map */
