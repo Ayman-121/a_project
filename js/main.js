@@ -2,9 +2,6 @@ let mainText = document.querySelector(".main-text");
 let achievements = document.querySelector(".achievements");
 let footer = document.querySelector(".footer");
 let goals = document.querySelector(".goals");
-let kkis = document.querySelector("#kkis");
-let numbers = document.querySelector("#kkis #numbers");
-let memberships = document.querySelector("#kkis #memberships"); 1
 
 window.onscroll = function () {
   if (window.scrollY >= mainText.offsetTop - 600) {
@@ -19,24 +16,6 @@ window.onscroll = function () {
     goals.style.cssText = "transform: translateY(0px);";
   }
 
-  if (window.scrollY >= kkis.offsetTop - 600) {
-    kkis.style.cssText = "transform: translateY(0px);";
-  }
-
-  if (window.scrollY >= numbers.offsetTop - 600) {
-    numbers.style.cssText = "transform: translateY(0px);";
-  }
-
-  if (window.scrollY >= memberships.offsetTop - 600) {
-    memberships.style.cssText = "transform: translateY(0px);";
-  }
-
-  if (window.scrollY >= numbersSection.offsetTop + 300) {
-    if (!started) {
-      nums.forEach((num) => startCount(num));
-    }
-    started = true;
-  }
 };
 
 window.onload = function () {
@@ -56,22 +35,6 @@ window.onload = function () {
 //
 //
 //
-
-let numbersSection = document.querySelector("#kkis #numbers")
-let nums = document.querySelectorAll("#kkis #numbers p span")
-let started = false; // Function Started ? No
-
-function startCount(el) {
-  let goal = el.dataset.goal;
-  let count = setInterval(() => {
-    el.textContent++;
-    if (el.textContent == goal) {
-      clearInterval(count);
-    }
-  }, 4000 / goal);
-}
-
-
 //
 //
 //
@@ -88,32 +51,6 @@ let date = new Date();
 dateDiv.innerHTML = date.getFullYear();
 
 //
-//
-//
-//
-let aloneImg = document.querySelector("#aloneImg");
-
-aloneImg.onclick = function () {
-  // Create The Overlay
-  let overlay = document.createElement("div");
-  overlay.classList.add("my-overlay");
-  document.body.appendChild(overlay);
-
-  // Create The Elemnt and Put The Text
-  let theImg = document.createElement("img");
-  theImg.classList.add("overlay-text","popup-img");
-  theImg.src = aloneImg.src;
-  overlay.appendChild(theImg);
-
-  // Create Exit button
-  let exitButton = document.createElement("div");
-  exitButton.classList.add("overlay-exit");
-  exitButton.innerHTML = "X";
-  exitButton.onclick = function () {
-    overlay.remove();
-  };
-  overlay.appendChild(exitButton);
-};
 //
 //
 //
